@@ -905,6 +905,19 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        padding: 6rem 1rem 3rem;
+    }
+
+    .hero-content {
+        padding-top: 2rem;
+    }
+    
+    .hero-car {
+        top: 180px; /* Position encore plus basse sur mobile */
+    }
+
     .conv-info {
         padding: 3rem 1rem;
     }
@@ -935,8 +948,10 @@ header {
 }
 
 .car-image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    opacity: 0.8;
+    margin-top: 80px;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
     transform: scale(1);
     transition: transform 0.3s ease;
