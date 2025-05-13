@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyon Taxi Service - Votre chauffeur de confiance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="page-conventioned">
+    <div class="color-picker">
+        <button class="color-picker-toggle" aria-label="Changer les couleurs">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="color-options">
+            <button class="color-option" data-color="#32348e" style="background-color: #32348e;"></button>
+            <button class="color-option" data-color="#2c3e50" style="background-color: #2c3e50;"></button>
+            <button class="color-option" data-color="#c0392b" style="background-color: #c0392b;"></button>
+            <button class="color-option" data-color="#27ae60" style="background-color: #27ae60;"></button>
+            <button class="color-option" data-color="#8e44ad" style="background-color: #8e44ad;"></button>
+            <button class="color-option" data-color="#f1c40f" style="background-color: #f1c40f;"></button>
+        </div>
+    </div>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="#accueil"><span>TaxiSûr</span></a>
+            </div>
+
+            <button class="hamburger-menu" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="coursetpmr.html">Course TPMR</a></li>
+                <li><a href="courseconv.html">Course conventionné</a></li>
+                <li><a href="courseclassique.html">Course classique</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reservation" class="btn-reservation">Réserver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-car">
+                <img src="images/VW-Caddy-Modulis-5-détouré-pour-vignette-BD-.png" alt="VW Caddy" class="car-image">
+            </div>
+            <a href="#reservation" class="hero-badge" onclick="selectMedicalService()">
+                <img src="images/Taxis_Conventionnes_Ile_de_France.png" alt="Taxi Conventionné" class="badge-icon">
+            </a>
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Courses TPMR</h1>
+                <p>Transport PMR, professionnel, confortable et ponctuel dans toute la région lyonnaise</p>
+                <div class="hero-buttons">
+                    <div class="main-buttons">
+                        <a href="#reservation" class="btn-primary">Réserver</a>
+                        <a href="tel:+33634374245" class="btn-secondary"><i class="fas fa-phone"></i> Appeler</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="why-choose-us" data-aos="fade-up">
+            <div class="container">
+                <h2>Pourquoi choisir notre service de transport PMR ?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-wheelchair"></i>
+                        </div>
+                        <h3>Véhicules adaptés</h3>
+                        <p>Nos véhicules sont équipés pour accueillir les fauteuils roulants et répondre aux besoins spécifiques des personnes à mobilité réduite.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Chauffeurs formés</h3>
+                        <p>Nos chauffeurs à Lyon sont spécialement formés pour accompagner les passagers PMR avec professionnalisme et bienveillance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Service fiable et ponctuel</h3>
+                        <p>Pour vos déplacements médicaux, familiaux ou professionnels, nous assurons une prise en charge sécurisée, ponctuelle et adaptée.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="additional-features" class="additional-features" data-aos="fade-up">
+            <div class="container">
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-item-icon">
+                            <i class="fas fa-clock-rotate-left"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Ponctualité et fiabilité</h3>
+                            <p>Nos chauffeurs VTC à Lyon vous garantissent des trajets organisés avec précision, dans le respect total de vos horaires.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Accessibilité et confort</h3>
+                            <p>Des véhicules adaptés pour vous offrir un transport sûr, confortable et sans contrainte, quelle que soit la durée du trajet.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Accompagnement sur mesure</h3>
+                            <p>À l'écoute et disponibles, nos chauffeurs vous accompagnent avec attention du départ jusqu'à votre destination.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reservation" class="booking-form">
+            <h2>Réservation en ligne</h2>
+            <form id="reservationForm" class="form-grid" data-aos="fade-up">
+                <!-- Sélection du service -->
+                <div class="form-group service-selection form-full-width">
+                    <label>Type de service</label>
+                    <div class="service-cards">
+                        <div class="service-choice-card" data-service="medical">
+                            <input type="radio" id="service-medical" name="service" value="medical">
+                            <label for="service-medical">
+                                <div class="service-choice-icons">
+                                    <i class="fas fa-wheelchair service-choice-icon"></i>
+                                </div>
+                                <h4>TPMR</h4>
+                                <p>Transport médical et PMR</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations personnelles -->
+                <div class="horizontal-form-group">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group" id="passengersGroup">
+                        <label for="passengers">Nombre de passagers</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="8" required>
+                    </div>
+                </div>
+
+                <!-- Adresses et simulateur -->
+                <div class="horizontal-form-group addresses">
+                    <div class="form-group">
+                        <label for="pickup">Adresse de prise en charge</label>
+                        <input type="text" id="pickup" name="pickup" placeholder="Entrez le point de départ" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" placeholder="Entrez la destination" required>
+                    </div>
+                </div>
+
+                <!-- Simulateur de prix -->
+                <div id="distancePrice" class="hidden">
+                    <div class="distance-info">
+                        <label>Distance estimée :</label>
+                        <span id="distanceValue">-- km</span>
+                    </div>
+                    <div class="price-info">
+                        <label>Prix estimé :</label>
+                        <span id="priceValue">-- €</span>
+                    </div>
+                </div>
+
+                <!-- Date et heure -->
+                <div class="horizontal-form-group date-time">
+                    <div class="form-group">
+                        <label for="date">Date de prise en charge</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Heure de prise en charge</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <!-- Blocs spéciaux -->
+                <div class="form-group" id="distancePrice" style="display: none;">
+                    <div class="distance-info">
+                        <label>Distance estimée :</label>
+                        <span id="distanceValue"></span>
+                    </div>
+                    <div class="price-info">
+                        <label>Prix estimé :</label>
+                        <span id="priceValue"></span>
+                    </div>
+                </div>
+
+                <div class="form-group" id="conventionnelFields" style="display: none;">
+                    <label for="numeroSecu">Numéro de sécurité sociale</label>
+                    <input type="text" id="numeroSecu" name="numeroSecu" pattern="[0-9]{15}" placeholder="15 chiffres">
+                </div>
+
+                <div class="form-group" id="journeeMessage" style="display: none;">
+                    <div class="info-message">
+                        <p>Pour une mise à disposition à la journée, le tarif sera communiqué sur demande.</p>
+                        <p>Nous vous contacterons rapidement pour vous faire un devis personnalisé.</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Envoyer</button>
+            </form>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <div class="contact-content" data-aos="fade-up">
+                <div class="contact-info">
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Téléphone</h3>
+                        <p><a href="tel:+33400000000">06 34 37 42 45</a></p>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:contact@lyontaxi.fr">taxilyonservice@gmail.com</a></p>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>Lyon et sa région</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Lyon Taxi Service</h3>
+                <p>Votre partenaire de confiance pour tous vos déplacements</p>
+            </div>
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#zones">Zones</a></li>
+                    <li><a href="#reservation">Réservation</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TaxiSûr. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("M2UfbxYZ-JsEkdC36");
+        })();
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
+    <!-- Google Maps JavaScript API -->
+    <script>
+        function initMapsAPI() {
+            const script = document.createElement('script');
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDgvPhkjv1hjbdvsH5UYaeLckwJ2IqgFyI&libraries=places&callback=initGoogleMaps';
+            script.async = true;
+            document.head.appendChild(script);
+        }
+        window.onload = initMapsAPI;
+    </script>
+</body>
+</html>

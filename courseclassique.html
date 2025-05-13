@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyon Taxi Service - Votre chauffeur de confiance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="page-classique">
+    <div class="color-picker">
+        <button class="color-picker-toggle" aria-label="Changer les couleurs">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="color-options">
+            <button class="color-option" data-color="#32348e" style="background-color: #32348e;"></button>
+            <button class="color-option" data-color="#2c3e50" style="background-color: #2c3e50;"></button>
+            <button class="color-option" data-color="#c0392b" style="background-color: #c0392b;"></button>
+            <button class="color-option" data-color="#27ae60" style="background-color: #27ae60;"></button>
+            <button class="color-option" data-color="#8e44ad" style="background-color: #8e44ad;"></button>
+            <button class="color-option" data-color="#f1c40f" style="background-color: #f1c40f;"></button>
+        </div>
+    </div>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="#accueil"><span>TaxiSûr</span></a>
+            </div>
+
+            <button class="hamburger-menu" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="coursetpmr.html">Course TPMR</a></li>
+                <li><a href="courseconv.html">Course conventionné</a></li>
+                <li><a href="courseclassique.html">Course classique</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reservation" class="btn-reservation">Réserver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Courses classiques</h1>
+                <p>Transport conventionnés, transport PMR, professionnel, confortable et ponctuel dans toute la région lyonnaise</p>
+                <div class="hero-buttons">
+                    <a href="#reservation" class="btn-primary">Réserver maintenant</a>
+                    <a href="tel:+33634374245" class="btn-secondary"><i class="fas fa-phone"></i> Appeler</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tarifs" class="tarifs">
+            <h2>Nos Tarifs</h2>
+            <div class="tarifs-grid">
+                <div class="tarif-card">
+                    <h3>Trajet en ville</h3>
+                    <p class="prix">À partir de 12€</p>
+                    <ul>
+                        <li>Prise en charge immédiate</li>
+                        <li>Prix fixe annoncé à l'avance</li>
+                    </ul>
+                </div>
+                <div class="tarif-card">
+                    <h3>Aéroport</h3>
+                    <p class="prix">À partir de 40€</p>
+                    <ul>
+                        <li>Suivi des vols</li>
+                        <li>30 minutes d'attente offertes</li>
+                    </ul>
+                </div>
+                <div class="tarif-card">
+                    <h3>Forfait journée</h3>
+                    <p class="prix">Sur devis</p>
+                    <ul>
+                        <li>Chauffeur éxperimenté</li>
+                        <li>Facturation à l'heure</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="reservation" class="booking-form">
+            <h2>Réservation en ligne</h2>
+            <form id="reservationForm" class="form-grid" data-aos="fade-up">
+                <!-- Sélection du service -->
+                <div class="form-group service-selection form-full-width">
+                    <label>Type de service</label>
+                    <div class="service-cards">
+                        <div class="service-choice-card">
+                            <input type="radio" id="service-standard" name="service" value="standard" required>
+                            <label for="service-standard">
+                                <img src="images/Fichier 1bnagba.png" alt="Courses Standard" class="service-choice-icon">
+                                <h4>Courses Standard</h4>
+                                <p>1-4 personnes</p>
+                            </label>
+                        </div>
+                        <div class="service-choice-card">
+                            <input type="radio" id="service-groupe" name="service" value="groupe">
+                            <label for="service-groupe">
+                                <img src="images/Fichier 3bnagba.png" alt="Courses de groupe" class="service-choice-icon">
+                                <h4>Courses de groupe</h4>
+                                <p>Véhicule 4-8 personnes</p>
+                            </label>
+                        </div>
+                        <div class="service-choice-card">
+                            <input type="radio" id="service-journee" name="service" value="journee">
+                            <label for="service-journee">
+                                <img src="images/Fichier 2bnagba.png" alt="Journée complète" class="service-choice-icon">
+                                <h4>Journée complète</h4>
+                                <p>Mise à disposition</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations personnelles -->
+                <div class="horizontal-form-group">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group" id="passengersGroup">
+                        <label for="passengers">Nombre de passagers</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="8" required>
+                    </div>
+                </div>
+
+                <!-- Adresses et simulateur -->
+                <div class="horizontal-form-group addresses">
+                    <div class="form-group">
+                        <label for="pickup">Adresse de prise en charge</label>
+                        <input type="text" id="pickup" name="pickup" placeholder="Entrez le point de départ" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" placeholder="Entrez la destination" required>
+                    </div>
+                </div>
+
+                <!-- Simulateur de prix -->
+                <div id="distancePrice" class="hidden">
+                    <div class="distance-info">
+                        <label>Distance estimée :</label>
+                        <span id="distanceValue">-- km</span>
+                    </div>
+                    <div class="price-info">
+                        <label>Prix estimé :</label>
+                        <span id="priceValue">-- €</span>
+                    </div>
+                </div>
+
+                <!-- Date et heure -->
+                <div class="horizontal-form-group date-time">
+                    <div class="form-group">
+                        <label for="date">Date de prise en charge</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Heure de prise en charge</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <!-- Blocs spéciaux -->
+                <div class="form-group" id="distancePrice" style="display: none;">
+                    <div class="distance-info">
+                        <label>Distance estimée :</label>
+                        <span id="distanceValue"></span>
+                    </div>
+                    <div class="price-info">
+                        <label>Prix estimé :</label>
+                        <span id="priceValue"></span>
+                    </div>
+                </div>
+
+                <div class="form-group" id="conventionnelFields" style="display: none;">
+                    <label for="numeroSecu">Numéro de sécurité sociale</label>
+                    <input type="text" id="numeroSecu" name="numeroSecu" pattern="[0-9]{15}" placeholder="15 chiffres">
+                </div>
+
+                <div class="form-group" id="journeeMessage" style="display: none;">
+                    <div class="info-message">
+                        <p>Pour une mise à disposition à la journée, le tarif sera communiqué sur demande.</p>
+                        <p>Nous vous contacterons rapidement pour vous faire un devis personnalisé.</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Envoyer</button>
+            </form>
+
+            <div class="payment-methods">
+                <h3>Modes de paiement acceptés</h3>
+                <div class="payment-icons">
+                    <div class="payment-icon">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>Visa</span>
+                    </div>
+                    <div class="payment-icon">
+                        <i class="fab fa-cc-mastercard"></i>
+                        <span>Mastercard</span>
+                    </div>
+                    <div class="payment-icon">
+                        <i class="fab fa-cc-amex"></i>
+                        <span>American Express</span>
+                    </div>
+                    <div class="payment-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Espèces</span>
+                    </div>
+                    <div class="payment-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>TPE Mobile</span>
+                    </div>
+                </div>
+                <p class="payment-note">Paiement sécurisé directement dans le taxi</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <div class="contact-content" data-aos="fade-up">
+                <div class="contact-info">
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Téléphone</h3>
+                        <p><a href="tel:+33400000000">06 34 37 42 45</a></p>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:contact@lyontaxi.fr">taxilyonservice@gmail.com</a></p>
+                    </div>
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>Lyon et sa région</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Lyon Taxi Service</h3>
+                <p>Votre partenaire de confiance pour tous vos déplacements</p>
+            </div>
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#zones">Zones</a></li>
+                    <li><a href="#reservation">Réservation</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TaxiSûr. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("M2UfbxYZ-JsEkdC36");
+        })();
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
+    <!-- Google Maps JavaScript API -->
+    <script>
+        function initMapsAPI() {
+            const script = document.createElement('script');
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDgvPhkjv1hjbdvsH5UYaeLckwJ2IqgFyI&libraries=places&callback=initGoogleMaps';
+            script.async = true;
+            document.head.appendChild(script);
+        }
+        window.onload = initMapsAPI;
+    </script>
+</body>
+</html>

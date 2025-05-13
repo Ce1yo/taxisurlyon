@@ -1,0 +1,16 @@
+{
+  "name": "taxi-reservation",
+  "version": "1.0.0",
+  "description": "Système de réservation de taxi avec notifications email",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "mongodb": "^5.3.0",
+    "mongoose": "^7.1.0",
+    "@sendgrid/mail": "^7.7.0"
+  }
+}
