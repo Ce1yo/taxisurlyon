@@ -1002,6 +1002,12 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+    .car-image {
+        width: 60% !important;
+        margin: 0 auto;
+        display: block;
+    }
+
     .page-conventioned .hero {
         display: block;
         padding: 0;
