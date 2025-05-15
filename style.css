@@ -434,7 +434,7 @@ header {
 /* Hero Section */
 .hero {
     margin-top: 60px;
-    min-height: 100vh;
+    min-height: 90vh;
     height: auto;
     padding: 4rem 1rem;
     position: relative;
@@ -448,7 +448,7 @@ header {
 
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -515,7 +515,7 @@ header {
 @media screen and (max-width: 768px) {
     .hero {
         padding: 8rem 1rem 2rem;
-        min-height: 100vh;
+        min-height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -787,11 +787,11 @@ header {
     background-size: cover;
     background-position: center;
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     overflow: hidden;
     color: var(--white);
 }
@@ -841,11 +841,11 @@ header {
     background-size: cover;
     background-position: center;
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     overflow: hidden;
 }
 
@@ -890,7 +890,7 @@ header {
 
 @media screen and (max-width: 768px) {
     .page-classique .hero .hero-car {
-        padding-top: 12rem !important;
+        padding-top: 8rem !important;
         margin-top: 2rem !important;
     }
 
@@ -994,7 +994,7 @@ header {
 
 @media screen and (max-width: 768px) {
     .hero {
-        min-height: 100vh;
+        min-height: 90vh;
         padding: 6rem 1rem 3rem;
     }
 
@@ -1091,7 +1091,7 @@ header {
 
 @media screen and (max-width: 768px) {
     .hero .hero-car {
-        padding-top: 12rem !important;
+        padding-top: 8rem !important;
         margin-top: 2rem !important;
     }
 
@@ -1219,14 +1219,14 @@ header {
     background-position: center;
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
 }
 
 @media screen and (max-width: 768px) {
     .page-conventioned .hero {
-        min-height: 100vh;
+        min-height: 90vh;
         padding: 0;
         position: relative;
         width: 100vw;
