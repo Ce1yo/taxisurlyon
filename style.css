@@ -783,34 +783,122 @@ header {
 
 /* Styles spécifiques pour la page TPMR */
 .page-tpmr .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, rgba(50, 52, 142, 0.8) 100%);
-    color: var(--white);
+    background-image: url('images/pexels-pixabay-104836.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
-    overflow: hidden;
-    padding: 8rem 2rem 4rem;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    padding: 8rem 2rem;
+    overflow: hidden;
+    color: var(--white);
 }
 
-.page-tpmr .hero h1,
-.page-tpmr .hero p {
-    color: var(--white);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.page-tpmr .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.75) 100%);
+    z-index: 1;
+}
+
+.page-tpmr .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 25%, transparent 50%);
+    z-index: 2;
 }
 
 .page-tpmr .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
+.page-tpmr .hero h1,
+.page-tpmr .hero p {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 3;
+}
+
+/* Styles spécifiques pour la page des courses classiques */
+.page-classique .hero {
+    background-image: url('images/pexels-pixabay-104836.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8rem 2rem;
+    overflow: hidden;
+}
+
+.page-classique .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.75) 100%);
+    z-index: 1;
+}
+
+.page-classique .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 25%, transparent 50%);
+    z-index: 2;
+}
+
+.page-classique .hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-classique .hero h1,
+.page-classique .hero p {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 3;
+}
+
 @media screen and (max-width: 768px) {
-    .page-tpmr .hero {
-        padding: 6rem 1rem 3rem;
-        min-height: 70vh;
+    .page-classique .hero .hero-car {
+        padding-top: 12rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .page-classique .hero .hero-car .car-image {
+        width: 75% !important;
+        max-width: 1200px !important;
+        transform: translateY(-70px) translateX(30px) !important;
+        padding-top: 0 !important;
     }
 }
 
@@ -940,7 +1028,7 @@ header {
 .hero-car {
     position: absolute;
     left: 5%;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     width: 40%;
     z-index: 1;
@@ -1002,10 +1090,48 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    .car-image {
-        width: 60% !important;
-        margin: 0 auto;
-        display: block;
+    .hero .hero-car {
+        padding-top: 12rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .page-tpmr .hero .hero-car {
+        padding-top: 6rem !important;
+    }
+    .hero .hero-car .car-image {
+        width: 80% !important;
+        max-width: 1500px !important;
+        display: block !important;
+        margin: 0 auto !important;
+        opacity: 1 !important;
+        transform: translateY(-30px) !important;
+        padding-top: 20px !important;
+    }
+
+    .page-tpmr .hero .hero-car .car-image {
+        width: 75% !important;
+        max-width: 1200px !important;
+        transform: translateY(-70px) translateX(30px) !important;
+        padding-top: 0 !important;
+    }
+
+    .hero-content .hero-buttons .main-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 1rem !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .hero-content .hero-buttons .main-buttons a {
+        width: auto !important;
+        min-width: 120px;
+    }
+
+
+
+    .hero-car {
+        margin-top: 2rem;
     }
 
     .page-conventioned .hero {
