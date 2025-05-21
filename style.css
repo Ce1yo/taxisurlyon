@@ -638,10 +638,23 @@ header {
 
 .hero-content {
     text-align: center;
+    color: white;
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
+    padding: 20px;
+}
+
+.transport-types {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    color: white;
+}
+
+.transport-types p {
+    font-size: 1.2em;
+    margin: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1032,15 +1045,15 @@ overflow: hidden;
 .page-conventioned .hero,
 .page-tpmr .hero,
 .page-classique .hero {
-position: relative;
-overflow: hidden;
-padding: 8rem 2rem 4rem;
-min-height: 80vh;
-display: flex;
-align-items: center;
-color: var(--white);
-margin-top: -60px;
-background: none !important;
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 2rem 4rem;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    margin-top: -60px;
+    background: none !important;
 }
 
 .page-tpmr .hero::before {
@@ -1144,21 +1157,22 @@ background: none !important;
 }
 
 /* Styles pour la section d'information sur les taxis conventionnés */
-.conv-info {
-    padding: 4rem 2rem;
-    background-color: var(--white);
-    position: relative;
-    overflow: hidden;
+.booking-form {
+    padding: 6rem 2rem;
+    background: var(--light-gray);
+    scroll-margin-top: 100px;
+    text-align: center;
 }
 
-.conv-info::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
+.conv-info .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+.conv-info h2 {
+    margin-bottom: 2rem;
+}
+
 
 .conv-info .container {
     max-width: 1200px;
@@ -1189,11 +1203,14 @@ background: none !important;
 }
 
 .info-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 4rem;
-    align-items: start;
-    position: relative;
+    margin-top: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .info-text {
@@ -1221,9 +1238,10 @@ background: none !important;
 }
 
 .info-features {
+    margin-top: 2rem;
     display: grid;
     gap: 2rem;
-    margin-top: 3rem;
+    width: 100%;
 }
 
 .info-feature {
@@ -1355,8 +1373,16 @@ background: none !important;
 }
 
 @media screen and (max-width: 768px) {
-    .hero {
+    .hero,
+    .page-tpmr .hero,
+    .page-classique .hero {
         min-height: 75vh;
+        padding: 8rem 1rem 2rem;
+    }
+
+    .page-conventioned .hero,
+    body.page-conventioned .hero {
+        min-height: 100vh !important;
         padding: 3rem 1rem 2rem;
     }
 
@@ -2528,6 +2554,7 @@ background: none !important;
     background: var(--white);
     border-radius: 15px;
     box-shadow: var(--shadow);
+    scroll-margin-top: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -3389,8 +3416,48 @@ footer {
 @media (max-width: 480px) {
     .hero-content .hero-buttons {
         display: flex;
+        gap: 20px;
         justify-content: center;
-        margin-top: 2rem;
+        margin-top: 30px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 200px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        z-index: 1;
+        margin-top: 8px;
+    }
+
+    .dropdown-content a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     .hero-content .main-buttons {

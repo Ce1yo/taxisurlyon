@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyon Taxi Service - Votre chauffeur de confiance</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -48,71 +49,16 @@
         <section id="accueil" class="hero">
             <div class="hero-content" data-aos="fade-up">
                 <h1>Votre taxi à Lyon 24h/24 et 7j/7</h1>
-                <p>Transport conventionnés, transport PMR, professionnel, confortable et ponctuel dans toute la région lyonnaise</p>
                 <div class="hero-buttons">
                     <a href="tel:+33762612457" class="btn-white"><i class="fas fa-phone"></i> Appeler</a>
-                    <a href="#services" class="btn-primary">Nos Services</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="services-showcase" data-aos="fade-up">
-            <h2>Découvrez nos services</h2>
-            <div class="services-cards">
-                <a href="coursetpmr.html" class="service-showcase-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-wheelchair"></i>
+                    <div class="dropdown">
+                        <button class="btn-primary dropbtn">Nos Services <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="coursetpmr.html">Transport TPMR</a>
+                            <a href="courseconv.html">Transport conventionné</a>
+                            <a href="courseclassique.html">Transport classique</a>
+                        </div>
                     </div>
-                    <h3>Transport TPMR</h3>
-                    <p>Adapté aux personnes à mobilité réduite</p>
-                    <span class="learn-more">En savoir plus <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <a href="courseconv.html" class="service-showcase-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-taxi"></i>
-                    </div>
-                    <h3>Courses Conventionnées</h3>
-                    <p>Transport médical conventionné</p>
-                    <span class="learn-more">En savoir plus <i class="fas fa-arrow-right"></i></span>
-                </a>
-                
-                <a href="courseclassique.html" class="service-showcase-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3>Courses Classiques</h3>
-                    <p>Transport standard et groupes</p>
-                    <span class="learn-more">En savoir plus <i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-        </section>
-
-        <section id="why-us" class="why-us" data-aos="fade-up">
-            <h2>Pourquoi nous choisir ?</h2>
-            <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>24/7 Disponible</h3>
-                    <p>Service disponible jour et nuit, tous les jours de la semaine</p>
-                </div>
-                
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Sécurité & Confort</h3>
-                    <p>Véhicules modernes et parfaitement entretenus</p>
-                </div>
-                
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>Zone Étendue</h3>
-                    <p>Couverture de toute la région lyonnaise</p>
                 </div>
             </div>
         </section>
